@@ -6,7 +6,7 @@
  * which accompanies this distribution, and is available at http://www.gnu.org/licenses/gpl.html
  * 
  * This class was made by MrPenguin and is distributed as a part of the Transmute Liquids mod.
- * Transmute Liquids is a derivative work on Thaumcraft 4 (c) Azanor 2012.
+ * Transmute Liquids is a derivative work on Thaumcraft 4 (c) Azanor 2012
  * http://www.minecraftforum.net/topic/2011841-thaumcraft-41114-updated-2052014/
  */
 package com.mrpenguin.mods.transmuteliquids.recipes;

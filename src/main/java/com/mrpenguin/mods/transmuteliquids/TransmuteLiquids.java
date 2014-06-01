@@ -12,6 +12,7 @@
 package com.mrpenguin.mods.transmuteliquids;
 
 import com.mrpenguin.mods.transmuteliquids.api.Buildcraft;
+import com.mrpenguin.mods.transmuteliquids.api.ModCompatability;
 import com.mrpenguin.mods.transmuteliquids.lib.Reference;
 import com.mrpenguin.mods.transmuteliquids.proxy.CommonProxy;
 import com.mrpenguin.mods.transmuteliquids.recipes.CrucibleRecipes;
@@ -26,10 +27,10 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, dependencies = "required-after:Thaumcraft")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, dependencies = "required-after:Thaumcraft;")
 public class TransmuteLiquids {
 	
-	@SidedProxy(clientSide = "com.mrpenguin.mods.transmuteliquids.proxy.ClientProxy", serverSide = "com.mrpenguin.mods.transmuteliquids.CommonProxy")
+	@SidedProxy(clientSide = "com.mrpenguin.mods.transmuteliquids.proxy.ClientProxy", serverSide = "com.mrpenguin.mods.transmuteliquids.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
 	@Instance(Reference.MOD_ID)
@@ -50,15 +51,20 @@ public class TransmuteLiquids {
 		
 		CrucibleRecipes.add();
 		
-		ThaumonomiconResearch.addResearch();
-		
-		if(Loader.isModLoaded("BuildCraft|Energy")) {
-			try {
-				Buildcraft.crucibleRecipes();
-				Buildcraft.thaumonomiconResearch();
+		if(Loader.isModLoaded("Forestry") && Loader.isModLoaded("BuildCraft|Energy")) {
+			ModCompatability.forestry();
+			ModCompatability.buildcraftForestry();
+			System.out.println("[TL] Forestry and Buildcraft Addons Loaded");
+		}else{
+			if(Loader.isModLoaded("Forestry")) {
+				ModCompatability.forestry();
+				System.out.println("[TL] Forestry Addon Loaded");
+			}else{
+				ThaumonomiconResearch.addResearch();
 			}
-			catch(Exception e) {
-				e.printStackTrace(System.err);
+			if(Loader.isModLoaded("BuildCraft|Energy")) {
+				ModCompatability.buildcraft();
+				System.out.println("[TL] Buildcraft Addon Loaded");
 			}
 		}
 		
