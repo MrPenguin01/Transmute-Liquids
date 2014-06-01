@@ -11,11 +11,13 @@
  */
 package com.mrpenguin.mods.transmuteliquids;
 
+import com.mrpenguin.mods.transmuteliquids.api.Buildcraft;
 import com.mrpenguin.mods.transmuteliquids.lib.Reference;
 import com.mrpenguin.mods.transmuteliquids.proxy.CommonProxy;
 import com.mrpenguin.mods.transmuteliquids.recipes.CrucibleRecipes;
 import com.mrpenguin.mods.transmuteliquids.research.ThaumonomiconResearch;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -49,6 +51,16 @@ public class TransmuteLiquids {
 		CrucibleRecipes.add();
 		
 		ThaumonomiconResearch.addResearch();
+		
+		if(Loader.isModLoaded("BuildCraft|Energy")) {
+			try {
+				Buildcraft.crucibleRecipes();
+				Buildcraft.thaumonomiconResearch();
+			}
+			catch(Exception e) {
+				e.printStackTrace(System.err);
+			}
+		}
 		
 		System.out.println("[TL] Transmute Liquids : Successful PostInit");
 	}
