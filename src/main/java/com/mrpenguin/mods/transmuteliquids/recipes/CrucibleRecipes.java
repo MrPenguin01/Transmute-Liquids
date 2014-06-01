@@ -27,6 +27,6 @@ public class CrucibleRecipes {
 	
 	public static void add() {
 		waterBucketRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Water", new ItemStack(Items.water_bucket), new ItemStack(Items.bucket), waterBucketCraftingAspects);
-		lavaBucketRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Water", new ItemStack(Items.lava_bucket), new ItemStack(Items.bucket), lavaBucketCraftingAspects);
+		lavaBucketRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Lava", new ItemStack(Items.lava_bucket), new ItemStack(Items.bucket), lavaBucketCraftingAspects);
 	}
 }
