@@ -62,7 +62,7 @@ public class TransmuteLiquids {
 		CrucibleRecipes.add();
 		
 		if(Loader.isModLoaded("Forestry") && Loader.isModLoaded("BuildCraft|Energy")) {
-			ModCompatability.forestry();
+			ModCompatability.forestryBuildcraft();
 			ModCompatability.buildcraftForestry();
 			System.out.println("[TL] Forestry and Buildcraft Addons Loaded");
 		}else{

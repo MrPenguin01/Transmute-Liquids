@@ -74,10 +74,10 @@ public class Buildcraft {
 		String text;
 		
 		text = "1";
-		research = new TLResearchItem("Transmute Oil", "Transmute Liquids", new AspectList(), 2, 2, 0, new ItemStack(BuildCraftEnergy.bucketOil)).setPages(new ResearchPage(oilBucketText), new ResearchPage(oilBucketRecipe),
+		research = new TLResearchItem("Transmute Oil", "Transmute Liquids", new AspectList(), 2, 2, 2, new ItemStack(BuildCraftEnergy.bucketOil)).setPages(new ResearchPage(oilBucketText), new ResearchPage(oilBucketRecipe),
 				new ResearchPage(waxCapsuleOilRecipe), new ResearchPage(refractoryOilRecipe), new ResearchPage(canOilRecipe)).setConcealed().setParents(new String[] { "Transmute Water" }).registerResearchItem();
 		text = "1";
-		research = new TLResearchItem("Transmute Fuel", "Transmute Liquids", new AspectList(), 3, 4, 0, new ItemStack(BuildCraftEnergy.bucketFuel)).setPages(new ResearchPage(fuelBucketText), new ResearchPage(fuelBucketRecipe),
+		research = new TLResearchItem("Transmute Fuel", "Transmute Liquids", new AspectList(), 3, 4, 3, new ItemStack(BuildCraftEnergy.bucketFuel)).setPages(new ResearchPage(fuelBucketText), new ResearchPage(fuelBucketRecipe),
 				new ResearchPage(waxCapsuleFuelRecipe), new ResearchPage(refractoryFuelRecipe), new ResearchPage(canFuelRecipe)).setConcealed().setSpecial().setParents(new String[] { "Transmute Oil" }).registerResearchItem();
 	}
 }

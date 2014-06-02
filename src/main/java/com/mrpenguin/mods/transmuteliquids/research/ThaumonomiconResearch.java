@@ -44,6 +44,6 @@ public class ThaumonomiconResearch {
 		research = new TLResearchItem("Transmute Water", "Transmute Liquids", new AspectList(), 0, 0, 1, new ItemStack(Items.water_bucket)).setPages(new ResearchPage(waterBucketText), new ResearchPage(CrucibleRecipes.waterBucketRecipe)).setSpecial().setParents(new String[] { "TRANSIRON" }).registerResearchItem();
 		
 		text = "1";
-		research = new TLResearchItem("Transmute Lava", "Transmute Liquids", new AspectList(), 0, 2, 1, new ItemStack(Items.lava_bucket)).setPages(new ResearchPage(lavaBucketText), new ResearchPage(CrucibleRecipes.lavaBucketRecipe)).setConcealed().setSecondary().setParents(new String[] { "Transmute Water" }).registerResearchItem();
+		research = new TLResearchItem("Transmute Lava", "Transmute Liquids", new AspectList(), 0, 2, 2, new ItemStack(Items.lava_bucket)).setPages(new ResearchPage(lavaBucketText), new ResearchPage(CrucibleRecipes.lavaBucketRecipe)).setConcealed().setSecondary().setParents(new String[] { "Transmute Water" }).registerResearchItem();
 	}
 }

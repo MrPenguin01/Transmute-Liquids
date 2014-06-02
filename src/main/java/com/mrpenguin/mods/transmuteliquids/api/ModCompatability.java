@@ -13,6 +13,16 @@ public class ModCompatability {
 		}
 	}
 	
+	public static void forestryBuildcraft() {
+		try {
+			Forestry.crucibleRecipes();
+			Forestry.thaumonomiconResearchBuidcraft();
+		}
+		catch(Exception e) {
+			e.printStackTrace(System.err);
+		}
+	}
+	
 	public static void forestry() {
 		try {
 			Forestry.crucibleRecipes();
