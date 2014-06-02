@@ -68,7 +68,7 @@ public class Forestry {
 		waxCapsuleBiomassRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Biomass", ForestryItem.waxCapsuleBiomass.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canBiomassAspectList);
 		waxCapsuleBiofuelRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Biofuel", ForestryItem.waxCapsuleBiofuel.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canBiofuelAspectList);
 		waxCapsuleJuiceRecipe = ThaumcraftApi.addCrucibleRecipe("Transute Juice", ForestryItem.waxCapsuleJuice.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canJuiceAspectList);
-            waxCapsuleSeedOilRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Seed Oil", Forestry.waxCapsuleSeedOil.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canSeedOilAspectList);
+           waxCapsuleSeedOilRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Seed Oil", Forestry.waxCapsuleSeedOil.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canSeedOilAspectList);
 		
 		refractoryWaterRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Water", ForestryItem.refractoryWater.getItemStack(1), ForestryItem.refractoryEmpty.getItemStack(1), canWaterAspectList);
 		refractoryLavaRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Lava", ForestryItem.refractoryLava.getItemStack(1), ForestryItem.refractoryEmpty.getItemStack(1), canLavaAspectList);
