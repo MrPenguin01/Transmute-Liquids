@@ -27,21 +27,21 @@ public class Forestry {
 	public static CrucibleRecipe waxCapsuleHoneyRecipe;
 	public static CrucibleRecipe waxCapsuleBiofuelRecipe;
 	public static CrucibleRecipe waxCapsuleBiomassRecipe;
-       public static CrucibleRecipe waxCapsuleJuiceRecipe;
+public static CrucibleRecipe waxCapsuleJuiceRecipe;
 	
 	public static CrucibleRecipe refractoryWaterRecipe;
 	public static CrucibleRecipe refractoryLavaRecipe;
 	public static CrucibleRecipe refractoryHoneyRecipe;
 	public static CrucibleRecipe refractoryBiofuelRecipe;
 	public static CrucibleRecipe refractoryBiomassRecipe;
-       public static CrucibleRecipe refractoryJuiceRecipe;
+public static CrucibleRecipe refractoryJuiceRecipe;
 	
 	public static CrucibleRecipe canWaterRecipe;
 	public static CrucibleRecipe canLavaRecipe;
 	public static CrucibleRecipe canHoneyRecipe;
 	public static CrucibleRecipe canBiofuelRecipe;
 	public static CrucibleRecipe canBiomassRecipe;
-       public static CrucibleRecipe canJuiceRecipe;
+public static CrucibleRecipe canJuiceRecipe;
 	
 	private static AspectList canWaterAspectList = new AspectList().add(Aspect.WATER, 4).add(Aspect.EXCHANGE, 2);
 	private static AspectList canLavaAspectList = new AspectList().add(Aspect.FIRE, 4).add(Aspect.EXCHANGE, 2);
@@ -51,7 +51,7 @@ public class Forestry {
 	private static AspectList canHoneyAspectList = new AspectList().add(Aspect.CROP, 4).add(Aspect.EXCHANGE, 2);
 	private static AspectList canBiomassAspectList = new AspectList().add(Aspect.PLANT, 4).add(Aspect.EXCHANGE, 2);
 	private static AspectList canBiofuelAspectList = new AspectList().add(Aspect.PLANT, 4).add(Aspect.EXCHANGE, 2).add(Aspect.TOOL, 2);
-       private static AspectList canJuiceAspectList = new AspectList().add(Aspect.CROP, 4).add(Aspect.EXCHANGE, 2);
+private static AspectList canJuiceAspectList = new AspectList().add(Aspect.CROP, 4).add(Aspect.EXCHANGE, 2);
 	
 	public static void crucibleRecipes() {
 		
