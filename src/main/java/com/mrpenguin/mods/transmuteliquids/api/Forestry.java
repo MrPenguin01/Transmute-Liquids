@@ -20,6 +20,7 @@ public class Forestry {
 	private static final String canHoneyText = "After using bees to generate some honey for you, you learn the uses of honey. Afterwards, you want to find out if it's possible to create honey after making water from aspects.";
 	private static final String canBiomassText = "While working with saplings you discovered a new fuel source and can mass produce this fuel using saplings. After many unsuccessful attemps you finally have created your first millibuckets of Biomass from aspects.";
 	private static final String canBiofuelText = "You finally figured out that you can refine Biomass for a more efficient fuel source that can also be mass produced. You decide to see if you can create it from aspects also, and you were very successful.";
+   private static final String canJuiceText = "After making honey from aspects, you work on some fruits and create some Juice. Numerous failed attempts later you finally create some Juice from aspects.";
 	
 	public static CrucibleRecipe potHoneyRecipe;
 	
