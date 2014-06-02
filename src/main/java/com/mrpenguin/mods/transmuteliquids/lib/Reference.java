@@ -14,5 +14,5 @@ package com.mrpenguin.mods.transmuteliquids.lib;
 public class Reference {
 	public static final String MOD_ID = "transmuteLiquids";
 	public static final String MOD_NAME = "Transmute Liquids";
-	public static final String MOD_VERSION = "v1.2.1";
+	public static final String MOD_VERSION = "v1.2.2";
 }

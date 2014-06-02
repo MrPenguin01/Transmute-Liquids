@@ -11,8 +11,10 @@
  */
 package com.mrpenguin.mods.transmuteliquids;
 
-import com.mrpenguin.mods.transmuteliquids.api.Buildcraft;
+import net.minecraftforge.common.MinecraftForge;
+
 import com.mrpenguin.mods.transmuteliquids.api.ModCompatability;
+import com.mrpenguin.mods.transmuteliquids.client.CapeEventHandler;
 import com.mrpenguin.mods.transmuteliquids.lib.Reference;
 import com.mrpenguin.mods.transmuteliquids.proxy.CommonProxy;
 import com.mrpenguin.mods.transmuteliquids.recipes.CrucibleRecipes;
@@ -26,6 +28,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, dependencies = "required-after:Thaumcraft;")
 public class TransmuteLiquids {
@@ -43,11 +46,18 @@ public class TransmuteLiquids {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		
+		if(event.getSide() == Side.CLIENT) {
+			MinecraftForge.EVENT_BUS.register(new CapeEventHandler());
+		}
+		
 		System.out.println("[TL] Transmute Liquids : Successful Init");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		
+		ThaumonomiconResearch.addResearchTab();
 		
 		CrucibleRecipes.add();
 		

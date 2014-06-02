@@ -1,14 +1,3 @@
-/**
- * Copyright (c) 2014 MrPenguin
- * All rights reserved.
- * 
- * This program and the accompanying materials are made available under the terms of the GNU Public License v3.0
- * which accompanies this distribution, and is available at http://www.gnu.org/licenses/gpl.html
- * 
- * This class was made by MrPenguin and is distributed as a part of the Transmute Liquids mod.
- * Transmute Liquids is a derivative work on Thaumcraft 4 (c) Azanor 2012.
- * http://www.minecraftforum.net/topic/2011841-thaumcraft-41114-updated-2052014/
- */
 package com.mrpenguin.mods.transmuteliquids.api;
 
 import net.minecraft.init.Items;
@@ -71,15 +60,15 @@ public class Forestry {
 		String text;
 		
 		text = "1";
-		research = new TLResearchItem("Transmute Water", "ALCHEMY", new AspectList(), -1, 7, 1, new ItemStack(Items.water_bucket)).setPages(new ResearchPage(ThaumonomiconResearch.waterBucketText), new ResearchPage(CrucibleRecipes.waterBucketRecipe),
-				new ResearchPage(waxCapsuleWaterRecipe), new ResearchPage(refractoryWaterRecipe), new ResearchPage(canWaterRecipe)).setConcealed().setSpecial().setParents(new String[] { "TRANSIRON" }).registerResearchItem();
+		research = new TLResearchItem("Transmute Water", "Transmute Liquids", new AspectList(), 0, 0, 1, new ItemStack(Items.water_bucket)).setPages(new ResearchPage(ThaumonomiconResearch.waterBucketText), new ResearchPage(CrucibleRecipes.waterBucketRecipe),
+				new ResearchPage(waxCapsuleWaterRecipe), new ResearchPage(refractoryWaterRecipe), new ResearchPage(canWaterRecipe)).setSpecial().setParents(new String[] { "TRANSIRON" }).registerResearchItem();
 		
 		text = "1";
-		research = new TLResearchItem("Transmute Lava", "ALCHEMY", new AspectList(), -1, 9, 2, new ItemStack(Items.lava_bucket)).setPages(new ResearchPage(ThaumonomiconResearch.lavaBucketText), new ResearchPage(CrucibleRecipes.lavaBucketRecipe),
+		research = new TLResearchItem("Transmute Lava", "Transmute Liquids", new AspectList(), 0, 2, 2, new ItemStack(Items.lava_bucket)).setPages(new ResearchPage(ThaumonomiconResearch.lavaBucketText), new ResearchPage(CrucibleRecipes.lavaBucketRecipe),
 				new ResearchPage(refractoryLavaRecipe), new ResearchPage(canLavaRecipe)).setConcealed().setSecondary().setParents(new String[] { "Transmute Water" }).registerResearchItem();
 	
 		text = "1";
-		research = new TLResearchItem("Transmute Honey", "ALCHEMY", new AspectList(), -3, 9, 0, ForestryItem.honeyPot.getItemStack(1)).setPages(new ResearchPage(canHoneyText), new ResearchPage(potHoneyRecipe),
+		research = new TLResearchItem("Transmute Honey", "Transmute Liquids", new AspectList(), -2, 2, 0, ForestryItem.honeyPot.getItemStack(1)).setPages(new ResearchPage(canHoneyText), new ResearchPage(potHoneyRecipe),
 				new ResearchPage(waxCapsuleHoneyRecipe), new ResearchPage(refractoryHoneyRecipe), new ResearchPage(canHoneyRecipe)).setConcealed().setSecondary().setParents(new String[] { "Transmute Water" }).registerResearchItem();
 	}
 }
