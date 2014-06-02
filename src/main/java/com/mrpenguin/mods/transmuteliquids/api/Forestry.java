@@ -27,7 +27,7 @@ public class Forestry {
 	public static CrucibleRecipe waxCapsuleHoneyRecipe;
 	public static CrucibleRecipe waxCapsuleBiofuelRecipe;
 	public static CrucibleRecipe waxCapsuleBiomassRecipe;
-public static CrucibleRecipe waxCapsuleJuiceRecipe;
+       public static CrucibleRecipe waxCapsuleJuiceRecipe;
 	
 	public static CrucibleRecipe refractoryWaterRecipe;
 	public static CrucibleRecipe refractoryLavaRecipe;
