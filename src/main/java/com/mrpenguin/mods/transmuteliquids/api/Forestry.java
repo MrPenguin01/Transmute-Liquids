@@ -21,7 +21,7 @@ public class Forestry {
 	private static final String canBiomassText = "While working with saplings you discovered a new fuel source and can mass produce this fuel using saplings. After many unsuccessful attemps you finally have created your first millibuckets of Biomass from aspects.";
 	private static final String canBiofuelText = "You finally figured out that you can refine Biomass for a more efficient fuel source that can also be mass produced. You decide to see if you can create it from aspects also, and you were very successful.";
     private static final String canJuiceText = "After making honey from aspects, you work on some fruits and create some Juice. Numerous failed attempts later you finally create some Juice from aspects.";
-    private static final String canSeedOilText = "";
+   private static final String canSeedOilText = "You found an alternative fuel source composed mostly of seeds and you decide this could be better then Oil due to its ease of mass producing. After plenty of tries you finally got some seed oil from aspects.";
 	
 	public static CrucibleRecipe potHoneyRecipe;
 	
@@ -37,8 +37,8 @@ public class Forestry {
 	public static CrucibleRecipe refractoryHoneyRecipe;
 	public static CrucibleRecipe refractoryBiofuelRecipe;
 	public static CrucibleRecipe refractoryBiomassRecipe;
-    public static CrucibleRecipe refractoryJuiceRecipe;
-    public static CrucibleRecipe refractorySeedOilRecipe;
+   public static CrucibleRecipe refractoryJuiceRecipe;
+   public static CrucibleRecipe refractorySeedOilRecipe;
 	
 	public static CrucibleRecipe canWaterRecipe;
 	public static CrucibleRecipe canLavaRecipe;
@@ -68,6 +68,7 @@ public class Forestry {
 		waxCapsuleBiomassRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Biomass", ForestryItem.waxCapsuleBiomass.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canBiomassAspectList);
 		waxCapsuleBiofuelRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Biofuel", ForestryItem.waxCapsuleBiofuel.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canBiofuelAspectList);
 		waxCapsuleJuiceRecipe = ThaumcraftApi.addCrucibleRecipe("Transute Juice", ForestryItem.waxCapsuleJuice.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canJuiceAspectList);
+      waxCapsuleSeedOilRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Seed Oil", Forestry.waxCapsuleSeedOil.getItemStack(1), ForestryItem.waxCapsule.getItemStack(1), canSeedOilAspectList);
 		
 		refractoryWaterRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Water", ForestryItem.refractoryWater.getItemStack(1), ForestryItem.refractoryEmpty.getItemStack(1), canWaterAspectList);
 		refractoryLavaRecipe = ThaumcraftApi.addCrucibleRecipe("Transmute Lava", ForestryItem.refractoryLava.getItemStack(1), ForestryItem.refractoryEmpty.getItemStack(1), canLavaAspectList);
