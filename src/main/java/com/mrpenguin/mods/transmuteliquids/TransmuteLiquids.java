@@ -14,10 +14,12 @@ package com.mrpenguin.mods.transmuteliquids;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.mrpenguin.mods.transmuteliquids.api.ModCompatability;
+import com.mrpenguin.mods.transmuteliquids.api.Railcraft;
 import com.mrpenguin.mods.transmuteliquids.client.CapeEventHandler;
+import com.mrpenguin.mods.transmuteliquids.lib.Buildcraft;
+import com.mrpenguin.mods.transmuteliquids.lib.Forestry;
 import com.mrpenguin.mods.transmuteliquids.lib.Reference;
 import com.mrpenguin.mods.transmuteliquids.proxy.CommonProxy;
-import com.mrpenguin.mods.transmuteliquids.recipes.CrucibleRecipes;
 import com.mrpenguin.mods.transmuteliquids.research.ThaumonomiconResearch;
 
 import cpw.mods.fml.common.Loader;
@@ -59,23 +61,25 @@ public class TransmuteLiquids {
 		
 		ThaumonomiconResearch.addResearchTab();
 		
-		CrucibleRecipes.add();
+		if(Loader.isModLoaded(Railcraft.Railcraft) && Loader.isModLoaded(Forestry.Forestry)) {
+			ModCompatability.railcraftForestry();
+			System.out.println("[TL] Transmute Liquids : Successfully Loaded Railcraft and Forestry Addon");
+		}else if(Loader.isModLoaded(Railcraft.Railcraft)) {
+			ModCompatability.railcraft();
+			System.out.println("[TL] Transmute Liquids : Successfully Loaded Railcraft Addon");
+		}
 		
-		if(Loader.isModLoaded("Forestry") && Loader.isModLoaded("BuildCraft|Energy")) {
-			ModCompatability.forestryBuildcraft();
+		if(Loader.isModLoaded(Forestry.Forestry)) {
+			ModCompatability.forestry();
+			System.out.println("[TL] Transmute Liquids : Successfully Loaded Forestry Addon");
+		}
+		
+		if(Loader.isModLoaded(Buildcraft.buildcraftEnergy) && Loader.isModLoaded(Forestry.Forestry)) {
 			ModCompatability.buildcraftForestry();
-			System.out.println("[TL] Forestry and Buildcraft Addons Loaded");
-		}else{
-			if(Loader.isModLoaded("Forestry")) {
-				ModCompatability.forestry();
-				System.out.println("[TL] Forestry Addon Loaded");
-			}else{
-				ThaumonomiconResearch.addResearch();
-			}
-			if(Loader.isModLoaded("BuildCraft|Energy")) {
-				ModCompatability.buildcraft();
-				System.out.println("[TL] Buildcraft Addon Loaded");
-			}
+			System.out.println("[TL] Transmute Liquids : Successfully Loaded Buildcraft and Forestry Addon");
+		}else if(Loader.isModLoaded(Buildcraft.buildcraftEnergy)){
+			ModCompatability.buildcraft();
+			System.out.println("[TL] Transmute Liquids : Successfully Loaded Buildcraft Addon");
 		}
 		
 		System.out.println("[TL] Transmute Liquids : Successful PostInit");

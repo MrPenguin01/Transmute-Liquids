@@ -19,31 +19,22 @@ import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 
-import com.mrpenguin.mods.transmuteliquids.recipes.CrucibleRecipes;
+import com.mrpenguin.mods.transmuteliquids.lib.TransmuteLiquids;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class ThaumonomiconResearch {
+public class ThaumonomiconResearch extends TransmuteLiquids{
 	
 	public static void addResearchTab() {
 		ResourceLocation background = new ResourceLocation("transmuteliquids:textures/gui/thaumonomiconBackground.png");
 		ResearchCategories.registerCategory("Transmute Liquids", new ResourceLocation("transmuteliquids:textures/misc/transmuteLiquidsIcon.png"), background);
 	}
 	
-	public static final String waterBucketText = "After being able to make more iron by using different aspects in the crucible, you try to do the same with liquids,"
-			+ " after many attemps you finally are able to create water out of aspects. Now try to try it on other liquids...";
-	
-	public static final String lavaBucketText = "You're able to create water from the crucible but after doing some research you've been able to get lava as well!."
-			+ "You might be able to create some custom liquids that have never been seen before...";
-	
 	public static void addResearch() {
 		ResearchItem research;
-		String text;
 		
-		text = "1";
-		research = new TLResearchItem("Transmute Water", "Transmute Liquids", new AspectList(), 0, 0, 1, new ItemStack(Items.water_bucket)).setPages(new ResearchPage(waterBucketText), new ResearchPage(CrucibleRecipes.waterBucketRecipe)).setSpecial().setParents(new String[] { "TRANSIRON" }).registerResearchItem();
+		research = new TLResearchItem(transmuteWater, transmuteLiquids, new AspectList(), 0, 0, 1, waterBucket).setPages(waterPageText, waterBucketPageRecipe).setSpecial().setParents(transmuteIron).registerResearchItem();
 		
-		text = "1";
-		research = new TLResearchItem("Transmute Lava", "Transmute Liquids", new AspectList(), 0, 2, 2, new ItemStack(Items.lava_bucket)).setPages(new ResearchPage(lavaBucketText), new ResearchPage(CrucibleRecipes.lavaBucketRecipe)).setConcealed().setSecondary().setParents(new String[] { "Transmute Water" }).registerResearchItem();
+		research = new TLResearchItem(transmuteLava, transmuteLiquids, new AspectList(), 0, 2, 2, lavaBucket).setPages(lavaPageText, lavaBucketPageRecipe).setConcealed().setSecondary().setParents(transmuteWater).registerResearchItem();
 	}
 }

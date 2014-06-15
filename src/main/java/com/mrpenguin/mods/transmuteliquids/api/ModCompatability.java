@@ -16,7 +16,6 @@ import cpw.mods.fml.common.Loader;
 public class ModCompatability {
 	public static void buildcraft() {
 		try {
-			Buildcraft.crucibleRecipes();
 			Buildcraft.thaumonomiconResearch();
 		}
 		catch(Exception e) {
@@ -24,10 +23,9 @@ public class ModCompatability {
 		}
 	}
 	
-	public static void forestryBuildcraft() {
+	public static void buildcraftForestry() {
 		try {
-			Forestry.crucibleRecipes();
-			Forestry.thaumonomiconResearchBuidcraft();
+			Buildcraft.thaumonomiconResearchForestry();
 		}
 		catch(Exception e) {
 			e.printStackTrace(System.err);
@@ -36,7 +34,6 @@ public class ModCompatability {
 	
 	public static void forestry() {
 		try {
-			Forestry.crucibleRecipes();
 			Forestry.thaumonomiconResearch();
 		}
 		catch(Exception e) {
@@ -44,11 +41,18 @@ public class ModCompatability {
 		}
 	}
 	
-	public static void buildcraftForestry() {
+	public static void railcraft() {
 		try{
-			Buildcraft.crucibleRecipes();
-			Buildcraft.crucibleRecipesForestry();
-			Buildcraft.thaumonomiconResearchForestry();
+			Railcraft.thaumonomiconResearch();
+		}
+		catch(Exception e) {
+			e.printStackTrace(System.err);
+		}
+	}
+	
+	public static void railcraftForestry() {
+		try {
+			Railcraft.thaumonomiconResearchForestry();
 		}
 		catch(Exception e) {
 			e.printStackTrace(System.err);
